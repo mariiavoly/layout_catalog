@@ -9,11 +9,10 @@
 .logo {
   display: flex;
   align-items: center;
-}
 
-.logo__img {
-  max-height: 100%;
-  display: block;
+  &__img {
+    display: block;
+  }
 }
 
 .nav__list {
@@ -34,6 +33,10 @@
 
   text-decoration: none;
   color: $main-accent;
+
+  &:hover {
+    color: $blue-accent;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -43,19 +46,15 @@
 .is-active {
   color: $blue-accent;
   position: relative;
-}
 
-.is-active::after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: $blue-accent;
-  border-radius: 8px;
-}
-
-.nav__link:hover {
-  color: $blue-accent;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $blue-accent;
+    border-radius: 8px;
+  }
 }
